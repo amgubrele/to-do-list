@@ -1,27 +1,67 @@
 *{
     padding: 0px;
     margin: 0px;
-    background-color: rgb(229, 233, 236);
+   
 }
 
 .body
 {
-    
+    height: 100vh;
+    background-color: rgb(229, 233, 236);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/*add task box*/
 .addTask{
     background-color: white;
     margin-top: 20vh;
     padding: 40px 60px;
+    box-shadow: 5px;
 }
+.addTask button{
+    padding: 4px 6px;
+    border: none;
+    border-bottom: 1px solid rgb(112, 112, 196);
+    border-radius: 5px;
+}
+.addTask button:hover{
+    background-color: rgb(126, 153, 202);
+    transition-duration: 0.5s;
+}
+
+.addTask input{
+    padding: 4px;
+    border:none;
+    border-bottom: 1px solid rgb(105, 105, 200);
+}
+.addTask input:focus {
+    outline: none; /* This removes the default focus outline */
+   /* border: 2px solid transparent;*/ /* Set border color to be transparent or the same as background color */
+  }
+
+  
+
+/*==============*/
 .list{
+    background-color: white;
+    height: 40px;
+    width: 40vw;
     margin-top: 40px;
+    display: flex;
 }
 .task{
-    background-color: white;
-    padding: 20px 100px;
-
+    width: 40vw;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task a{
+    margin-left: 5px;
+}
+.task span i{
+    margin-right: 8px;
+}
+.task button{
+    margin-right: 4px;
 }
