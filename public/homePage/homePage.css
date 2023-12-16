@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(229, 233, 236);
+}
+
+.body
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addTask{
+    background-color: white;
+    margin-top: 20vh;
+    padding: 40px 60px;
+}
+.list{
+    margin-top: 40px;
+}
+.task{
+    background-color: white;
+    padding: 20px 100px;
+
+}
