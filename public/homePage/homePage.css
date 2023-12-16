@@ -51,7 +51,18 @@
     display: flex;
 }
 .task{
-    background-color: white;
-    padding: 20px 100px;
-
+    width: 40vw;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+.task a{
+    margin-left: 5px;
+}
+.task span i{
+    margin-right: 8px;
+}
+.task button{
+    margin-right: 4px;
+}
+/*git */
