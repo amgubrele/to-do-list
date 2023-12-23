@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(236, 241, 244);
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 450px;
+    height: 30vh;
+    background-color:white;
+    /* margin-left: 23vw;*/
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+}
+.updateForm{
+    background-color: white;
+}
+.updateForm input{
+    margin-top: 30px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.2em
+}
+.updateForm div{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.updateForm button{
+    padding: 5px 20px;
+}
+.update{
+    background-color: rgb(142, 236, 142);
+    color: rgb(8, 66, 12);
+    font-weight: bold;
+}
+.delete{
+    background-color: rgb(228, 101, 101);color: rgb(8, 66, 12);
+    font-weight: bold;
+}

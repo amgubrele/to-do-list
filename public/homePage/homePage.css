@@ -6,7 +6,8 @@
 
 .body
 {
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     background-color: rgb(229, 233, 236);
     display: flex;
     flex-direction: column;
@@ -14,10 +15,19 @@
 }
 /*add task box*/
 .addTask{
+    display: flex;
+    justify-content: center;
+    width: 40vw;
     background-color: white;
     margin-top: 20vh;
     padding: 40px 60px;
     box-shadow: 5px;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .addTask button{
     padding: 4px 6px;
@@ -31,6 +41,7 @@
 }
 
 .addTask input{
+    width: 30vw;
     padding: 4px;
     border:none;
     border-bottom: 1px solid rgb(105, 105, 200);
@@ -43,26 +54,39 @@
   
 
 /*==============*/
+.container2{
+   display: flex;
+   flex-direction: column;
+   margin-top: 10vh;
+    
+}
 .list{
-    background-color: white;
+    margin-top: 10px;
+    width: 55vw;
     height: 40px;
-    width: 40vw;
-    margin-top: 40px;
+    background-color: white;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.task{
-    width: 40vw;;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.list p{
+    margin-left: 10px;
 }
-.task a{
-    margin-left: 5px;
+.list div{
+    margin-right: 10px;
 }
-.task span i{
-    margin-right: 8px;
+.list button{
+    margin-left: 10px;
+    background-color: rgb(250, 65, 65);
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 4px;
 }
-.task button{
-    margin-right: 4px;
+.circle{
+    height: 10px;
+    width: 10px;
+    /* background-color: red; */
+    border-radius: 10px;
 }
-/*git */

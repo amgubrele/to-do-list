@@ -8,9 +8,11 @@ const bodyParser = require('body-parser');
 
 
 //middlewares
-app.use(express.static('./public'));
 app.use(bodyParser.json());
 app.use('/api/v1/tasks',tasks);
+app.use(express.static('./public/homePage'));
+app.use(express.static('./public/singleTaskPage'))
+
 
 
 

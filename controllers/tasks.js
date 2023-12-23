@@ -22,7 +22,7 @@ const createTask = async (req, res) => {
       }
       catch(error)
       {
-        console.log(err);
+        
         res.status(500).json({msg:error})
       }
   };
