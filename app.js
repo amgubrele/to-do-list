@@ -4,7 +4,8 @@ const app=express();
 const tasks=require('./routes/tasks')
 require('dotenv').config()
 const bodyParser = require('body-parser');
-
+const notFound=require('./middlewares/not-found');
+const errorHandlerMiddleware=require('./middlewares/error-handler');
 
 
 //middlewares
@@ -12,8 +13,8 @@ app.use(bodyParser.json());
 app.use('/api/v1/tasks',tasks);
 app.use(express.static('./public/homePage'));
 app.use(express.static('./public/singleTaskPage'))
-
-
+app.use(notFound);
+app.use(errorHandlerMiddleware);
 
 
 

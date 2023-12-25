@@ -1,34 +1,25 @@
 const Task=require('../models/task.js')
+const asyncWrapper=require('../middlewares/async.js');
 
 
-const getAllTasks=async(req,res)=>{
-    try{
+
+const getAllTasks=asyncWrapper(async(req,res)=>{
+   
         const tasks=await Task.find({});
         res.status(200).json({tasks:tasks})
-
-    }
-    catch(error){
-        res.status(500).json({msg:error})
-    }
-    
-}
+})
 
 
-const createTask = async (req, res) => {
-      try{
+const createTask =asyncWrapper( async (req, res) => {
+      
         //task.create is to create an elemnt in the data base with data req.body
       const task = await Task.create(req.body);  
       res.status(201).json({ task });
-      }
-      catch(error)
-      {
-        
-        res.status(500).json({msg:error})
-      }
-  };
+      
+  })
 
-const getTask=async(req,res)=>{
-    try{
+const getTask= asyncWrapper (async(req,res)=>{
+   
         const {id:taskID}=req.params;
         const task=await Task.findOne({_id:taskID});
         if(!task)
@@ -36,14 +27,10 @@ const getTask=async(req,res)=>{
             return res.status(404).json({msg:`No task with id ${taskID}.`})
         }
         res.status(200).json({task});
-    }
-    catch(error){
-        s.status(500).json({msg:error})
-    }
-}
+})
 
-const updateTask=async(req,res)=>{
-    try {
+const updateTask=asyncWrapper (async(req,res)=>{
+    
         const {id:taskID}=req.params;
         const task=await Task.findByIdAndUpdate({_id:taskID},req.body,
             {new:true,runValidators:true})  //so the upsated also follow the scehma lke 20 max char and not empot;y
@@ -53,14 +40,10 @@ const updateTask=async(req,res)=>{
             return res.status(404).json({msg:`No task with id ${taskID}.`})
         }
         res.status(200).json({task})
-    } catch (error) {
-        s.status(500).json({msg:error})
-        
-    }
-}
+   
+})
 
-const deleteTask=async(req,res)=>{
-    try {
+const deleteTask=asyncWrapper( async(req,res)=>{
         const {id:taskID}=req.params;
         const task=await Task.findOneAndDelete({_id:taskID});
         if(!task)
@@ -68,10 +51,8 @@ const deleteTask=async(req,res)=>{
             return res.status(404).json({msg:`No task with id ${taskID}.`})
         }
         res.status(200).json({task})
-    } catch (error) {
-        s.status(500).json({msg:error})
-    }
-}
+    
+})
 
 
 module.exports={
