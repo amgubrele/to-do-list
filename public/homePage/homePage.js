@@ -8,8 +8,8 @@ formDOM.addEventListener('submit', async (e) => {
     const name=task.value;
      console.log(name);
     try {
-      await axios.post('/api/v1/tasks',{name});
-      console.log(name);
+      const value=await axios.post('/api/v1/tasks',{name});
+      // console.log(value);
       // displayingAllTasks();
     }catch (error) {
       console.log(error);

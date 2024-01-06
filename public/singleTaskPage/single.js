@@ -56,8 +56,7 @@ updateBtn.addEventListener('click',async()=>{
 
         await axios.patch(`api/v1/tasks/${currID}`,{name:temp,completed:isCompleted.checked})
         console.log(isCompleted.checked)
-        alert('updated')
-        setTimeout(back,1000);
+        back();
 
     } catch (error) {
         console.log(error)
